@@ -21,4 +21,7 @@ RUN apt-get update && \
 # Installs hyper
 RUN wget https://hyper-install.s3.amazonaws.com/hyper-linux-x86_64.tar.gz && \
     tar xzf hyper-linux-x86_64.tar.gz && \
-    rm hyper-linux-x86_64.tar.gz
+    rm hyper-linux-x86_64.tar.gz && \
+    ln -s /root/hyper /usr/bin/hyper
+
+WORKDIR /app
